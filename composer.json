@@ -1,0 +1,20 @@
+{
+    "name": "molovo/accidents",
+    "description": "Pretty error handling for command-line PHP apps.",
+    "keywords": ["accidents", "error", "exception"],
+    "license": "MIT",
+    "authors": [
+      {
+        "name": "James Dinsdale",
+        "email": "hi@molovo.co"
+      }
+    ],
+    "require": {
+      "molovo/graphite": "~0.1"
+    },
+    "autoload": {
+      "psr-4": {
+        "Accidents\\": "src/Accidents"
+      }
+    }
+}
