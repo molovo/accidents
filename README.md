@@ -2,6 +2,8 @@
 
 Pretty error handling for command-line PHP apps.
 
+![Screenshot](http://i.imgur.com/4mdzg3D.png)
+
 ## Installation
 
 ```sh
