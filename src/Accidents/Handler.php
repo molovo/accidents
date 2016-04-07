@@ -61,7 +61,7 @@ class Handler
     public function __construct()
     {
         $this->output = new Graphite;
-        $this->output->setGlobalIndent(4);
+        $this->output->setGlobalIndent(2);
     }
 
     protected function outputException($e)
@@ -75,12 +75,9 @@ class Handler
 
         // Add the exception name to the title line and render it
         echo "\n";
-        $exception = $this->output->bold->red(get_class($e));
-        echo $this->output->render("$type $exception");
-
-        // Reset the indent for the stack trace
-        $indent = strlen($this->output->strip($type)) + 5;
-        $this->output->setGlobalIndent($indent);
+        echo $this->output->render("$type");
+        echo "\n";
+        echo $this->output->bold->red->render(get_class($e));
 
         // Output the exception message
         echo $this->output->yellow->render($e->getMessage());
